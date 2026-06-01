@@ -13,47 +13,6 @@ Asfaw Beyene, San Diego State University, Department of Mechanical Engineering, 
 This study evaluates the pre-deployment feasibility of modular solar-powered spray cooling canopies for outdoor public spaces. The analysis uses hourly Typical Meteorological Year extended (TMYx) weather files for 110 locations across Türkiye. The framework combines photovoltaic (PV) energy estimation, adaptive misting control, electrical-load calculation, water-use estimation, climate-archetype-zone classification, and sensitivity analysis.
 The objective is not to predict site-specific pedestrian thermal comfort directly, but to provide a reproducible system-level screening method for identifying where PV-powered evaporative spray cooling is climatically suitable, where water or PV sizing may become limiting, and where alternative outdoor heat-mitigation strategies may be more appropriate.
 
-## Repository Structure
-
-
-MSPSCC-climate-archetype-screening/
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── notebooks/
-│   └── MSPSCC_TMYx_analysis.ipynb
-├── data_processed/
-│   ├── results_by_city.csv
-│   ├── results_by_city_with_clusters.csv
-│   ├── results_by_cluster.csv
-│   ├── final_cluster_verification.csv
-│   ├── cluster_validation_metrics.csv
-│   ├── cluster_k4_k5_k6_summary.csv
-│   ├── cluster_robustness_checks.csv
-│   ├── sensitivity_by_city.csv
-│   ├── sensitivity_by_archetype.csv
-│   ├── sensitivity_overall.csv
-│   ├── sensitivity_baseline_check.csv
-│   └── pv_area_scaling_by_archetype.csv
-├── station_list/
-│   └── onebuilding_epw_station_list.csv
-├── figures/
-│   ├── Figure_1_Station_Map.png
-│   ├── fig_cluster_validation_metrics.png
-│   ├── fig2_Ta_vs_RH_archetypes.png
-│   ├── fig3_PV_vs_Load.png
-│   ├── fig4_autonomy_by_archetype.png
-│   ├── fig5_water_vs_mist_hours.png
-│   ├── fig_sensitivity_tornado_misting_hours.png
-│   ├── fig_sensitivity_tornado_water_use.png
-│   └── fig_sensitivity_tornado_autonomy.png
-└── supplementary/
-    ├── Supplementary_Table_S1.csv
-    └── Interactive_Station_Map.html
-
-
-Folder names may be adjusted depending on the final archive structure.
-
 ## Climate Data Source
 
 The raw weather files used in this study are publicly available from the OneBuilding repository:
@@ -62,14 +21,8 @@ The raw weather files used in this study are publicly available from the OneBuil
 
 The analysis uses TMYx weather files representing a typical meteorological year constructed from 2009–2023 source data. These files are not continuous 15-year hourly simulations. The raw EPW/TMYx files are not redistributed in this repository due to file-size considerations and because they are already publicly available from OneBuilding.
 
-The station identifiers and file names needed to reproduce the analysis are provided in:
-
-station_list/onebuilding_epw_station_list.csv
-
-
-or, depending on the final repository structure:
-
-supplementary/Supplementary_Table_S1.csv
+The station identifier:
+supplementary/Supplementary_Table_S1_City_Level_Results.docx
 
 
 ## Main Outputs
